@@ -85,6 +85,8 @@ import org.eclipse.jst.javaee.jsp.JspConfig;
  *   <li>{@link org.eclipse.jst.javaee.web.WebApp#getAdministeredObject <em>Administered Object</em>}</li>
  *   <li>{@link org.eclipse.jst.javaee.web.WebApp#getMessageDestinations <em>Message Destinations</em>}</li>
  *   <li>{@link org.eclipse.jst.javaee.web.WebApp#getLocalEncodingMappingsLists <em>Local Encoding Mappings Lists</em>}</li>
+ *   <li>{@link org.eclipse.jst.javaee.web.WebApp#getRequestCharacterEncodings <em>Request Character Encodings</em>}</li>
+ *   <li>{@link org.eclipse.jst.javaee.web.WebApp#getResponseCharacterEncodings <em>Response Character Encodings</em>}</li>
  *   <li>{@link org.eclipse.jst.javaee.web.WebApp#getDenyUncoveredHttpMethods <em>Deny Uncovered Http Methods</em>}</li>
  *   <li>{@link org.eclipse.jst.javaee.web.WebApp#getAbsoluteOrdering <em>Absolute Ordering</em>}</li>
  *   <li>{@link org.eclipse.jst.javaee.web.WebApp#getId <em>Id</em>}</li>
@@ -696,6 +698,46 @@ public interface WebApp extends IWebCommon {
 	 * @generated
 	 */
 	List<LocaleEncodingMappingList> getLocalEncodingMappingsLists();
+
+	/**
+	 * Returns the value of the '<em><b>Request Character Encoding</b></em>' containment reference list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * 
+	 * 
+	 *             The request-character-encoding provides a default request character
+	 *             encoding of the web application.
+	 *             
+	 *             @since Java EE 8, Web 4.0
+	 *           
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Request Character Encoding</em>' containment reference list.
+	 * @see org.eclipse.jst.javaee.web.internal.metadata.WebPackage#getWebApp_ResponseCharacterEncodings()
+	 * @generated
+	 */
+	List<String> getRequestCharacterEncodings();
+
+	/**
+	 * Returns the value of the '<em><b>Response Character Encoding</b></em>' containment reference list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * 
+	 * 
+	 *             The response-character-encoding provides a default response character
+	 *             encoding of the web application.
+	 *             
+	 *             @since Java EE 8, Web 4.0
+	 *           
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Deny Uncovered Http Methods</em>' containment reference list.
+	 * @see org.eclipse.jst.javaee.web.internal.metadata.WebPackage#getWebApp_RequestCharacterEncodings()
+	 * @generated
+	 */
+	List<String> getResponseCharacterEncodings();
 
 	/**
 	 * Returns the value of the '<em><b>Deny Uncovered Http Methods</b></em>' containment reference list.

@@ -115,6 +115,8 @@ import org.eclipse.jst.javaee.web.internal.metadata.WebPackage;
  *   <li>{@link org.eclipse.jst.javaee.web.internal.impl.WebAppImpl#getAdministeredObject <em>Administered Object</em>}</li>
  *   <li>{@link org.eclipse.jst.javaee.web.internal.impl.WebAppImpl#getMessageDestinations <em>Message Destinations</em>}</li>
  *   <li>{@link org.eclipse.jst.javaee.web.internal.impl.WebAppImpl#getLocalEncodingMappingsLists <em>Local Encoding Mappings Lists</em>}</li>
+ *   <li>{@link org.eclipse.jst.javaee.web.internal.impl.WebAppImpl#getRequestCharacterEncodings <em>Request Character Encodings</em>}</li>
+ *   <li>{@link org.eclipse.jst.javaee.web.internal.impl.WebAppImpl#getResponseCharacterEncodings <em>Response Character Encodings</em>}</li>
  *   <li>{@link org.eclipse.jst.javaee.web.internal.impl.WebAppImpl#getDenyUncoveredHttpMethods <em>Deny Uncovered Http Methods</em>}</li>
  *   <li>{@link org.eclipse.jst.javaee.web.internal.impl.WebAppImpl#getAbsoluteOrdering <em>Absolute Ordering</em>}</li>
  *   <li>{@link org.eclipse.jst.javaee.web.internal.impl.WebAppImpl#getId <em>Id</em>}</li>
@@ -582,6 +584,24 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public List<String> getRequestCharacterEncodings() {
+		return getGroup().list(WebPackage.Literals.WEB_APP__REQUEST_CHARACTER_ENCODINGS);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<String> getResponseCharacterEncodings() {
+		return getGroup().list(WebPackage.Literals.WEB_APP__RESPONSE_CHARACTER_ENCODINGS);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public List<EmptyType> getDenyUncoveredHttpMethods() {
 		return getGroup().list(WebPackage.Literals.WEB_APP__DENY_UNCOVERED_HTTP_METHODS);
 	}
@@ -801,6 +821,10 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 				return ((InternalEList<?>)getMessageDestinations()).basicRemove(otherEnd, msgs);
 			case WebPackage.WEB_APP__LOCAL_ENCODING_MAPPINGS_LISTS:
 				return ((InternalEList<?>)getLocalEncodingMappingsLists()).basicRemove(otherEnd, msgs);
+			case WebPackage.WEB_APP__REQUEST_CHARACTER_ENCODINGS:
+				return ((InternalEList<?>)getRequestCharacterEncodings()).basicRemove(otherEnd, msgs);
+			case WebPackage.WEB_APP__RESPONSE_CHARACTER_ENCODINGS:
+				return ((InternalEList<?>)getResponseCharacterEncodings()).basicRemove(otherEnd, msgs);
 			case WebPackage.WEB_APP__DENY_UNCOVERED_HTTP_METHODS:
 				return ((InternalEList<?>)getDenyUncoveredHttpMethods()).basicRemove(otherEnd, msgs);
 			case WebPackage.WEB_APP__ABSOLUTE_ORDERING:
@@ -896,6 +920,10 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 				return getMessageDestinations();
 			case WebPackage.WEB_APP__LOCAL_ENCODING_MAPPINGS_LISTS:
 				return getLocalEncodingMappingsLists();
+			case WebPackage.WEB_APP__REQUEST_CHARACTER_ENCODINGS:
+				return getRequestCharacterEncodings();
+			case WebPackage.WEB_APP__RESPONSE_CHARACTER_ENCODINGS:
+				return getResponseCharacterEncodings();
 			case WebPackage.WEB_APP__DENY_UNCOVERED_HTTP_METHODS:
 				return getDenyUncoveredHttpMethods();
 			case WebPackage.WEB_APP__ABSOLUTE_ORDERING:
@@ -1074,6 +1102,14 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 				getLocalEncodingMappingsLists().clear();
 				getLocalEncodingMappingsLists().addAll((Collection<? extends LocaleEncodingMappingList>)newValue);
 				return;
+			case WebPackage.WEB_APP__REQUEST_CHARACTER_ENCODINGS:
+				getRequestCharacterEncodings().clear();
+				getRequestCharacterEncodings().addAll((Collection<? extends String>)newValue);
+				return;
+			case WebPackage.WEB_APP__RESPONSE_CHARACTER_ENCODINGS:
+				getResponseCharacterEncodings().clear();
+				getResponseCharacterEncodings().addAll((Collection<? extends String>)newValue);
+				return;
 			case WebPackage.WEB_APP__DENY_UNCOVERED_HTTP_METHODS:
 				getDenyUncoveredHttpMethods().clear();
 				getDenyUncoveredHttpMethods().addAll((Collection<? extends EmptyType>)newValue);
@@ -1220,6 +1256,12 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 			case WebPackage.WEB_APP__LOCAL_ENCODING_MAPPINGS_LISTS:
 				getLocalEncodingMappingsLists().clear();
 				return;
+			case WebPackage.WEB_APP__REQUEST_CHARACTER_ENCODINGS:
+				getRequestCharacterEncodings().clear();
+				return;
+			case WebPackage.WEB_APP__RESPONSE_CHARACTER_ENCODINGS:
+				getResponseCharacterEncodings().clear();
+				return;
 			case WebPackage.WEB_APP__DENY_UNCOVERED_HTTP_METHODS:
 				getDenyUncoveredHttpMethods().clear();
 				return;
@@ -1325,6 +1367,10 @@ public class WebAppImpl extends EObjectImpl implements WebApp {
 				return !getMessageDestinations().isEmpty();
 			case WebPackage.WEB_APP__LOCAL_ENCODING_MAPPINGS_LISTS:
 				return !getLocalEncodingMappingsLists().isEmpty();
+			case WebPackage.WEB_APP__REQUEST_CHARACTER_ENCODINGS:
+				return !getRequestCharacterEncodings().isEmpty();
+			case WebPackage.WEB_APP__RESPONSE_CHARACTER_ENCODINGS:
+				return !getResponseCharacterEncodings().isEmpty();
 			case WebPackage.WEB_APP__DENY_UNCOVERED_HTTP_METHODS:
 				return !getDenyUncoveredHttpMethods().isEmpty();
 			case WebPackage.WEB_APP__ABSOLUTE_ORDERING:

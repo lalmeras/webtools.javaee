@@ -1959,13 +1959,31 @@ public interface WebPackage extends EPackage {
 	int WEB_APP__LOCAL_ENCODING_MAPPINGS_LISTS = 38;
 
 	/**
+	 * The feature id for the '<em><b>Request Character Encoding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APP__REQUEST_CHARACTER_ENCODINGS = 39;
+
+	/**
+	 * The feature id for the '<em><b>Response Character Encoding</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEB_APP__RESPONSE_CHARACTER_ENCODINGS = 40;
+
+	/**
 	 * The feature id for the '<em><b>Deny Uncovered Http Methods</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__DENY_UNCOVERED_HTTP_METHODS = 39;
+	int WEB_APP__DENY_UNCOVERED_HTTP_METHODS = 41;
 
 	/**
 	 * The feature id for the '<em><b>Absolute Ordering</b></em>' containment reference list.
@@ -1974,7 +1992,7 @@ public interface WebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__ABSOLUTE_ORDERING = 40;
+	int WEB_APP__ABSOLUTE_ORDERING = 42;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1983,7 +2001,7 @@ public interface WebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__ID = 41;
+	int WEB_APP__ID = 43;
 
 	/**
 	 * The feature id for the '<em><b>Metadata Complete</b></em>' attribute.
@@ -1992,7 +2010,7 @@ public interface WebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__METADATA_COMPLETE = 42;
+	int WEB_APP__METADATA_COMPLETE = 44;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -2001,7 +2019,7 @@ public interface WebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP__VERSION = 43;
+	int WEB_APP__VERSION = 45;
 
 	/**
 	 * The number of structural features of the '<em>App</em>' class.
@@ -2010,7 +2028,7 @@ public interface WebPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WEB_APP_FEATURE_COUNT = 44;
+	int WEB_APP_FEATURE_COUNT = 46;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.jst.javaee.web.internal.impl.WebAppDeploymentDescriptorImpl <em>App Deployment Descriptor</em>}' class.
@@ -4442,6 +4460,28 @@ public interface WebPackage extends EPackage {
 	EReference getWebApp_LocalEncodingMappingsLists();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.jst.javaee.web.WebApp#getRequestCharacterEncodings <em>Request Character Encoding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Request Character Encoding</em>'.
+	 * @see org.eclipse.jst.javaee.web.WebApp#getRequestCharacterEncodings()
+	 * @see #getWebApp()
+	 * @generated
+	 */
+	EReference getWebApp_RequestCharacterEncodings();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.jst.javaee.web.WebApp#getResponseCharacterEncodings <em>Response Character Encoding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Response Character Encoding</em>'.
+	 * @see org.eclipse.jst.javaee.web.WebApp#getResponseCharacterEncodings()
+	 * @see #getWebApp()
+	 * @generated
+	 */
+	EReference getWebApp_ResponseCharacterEncodings();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipse.jst.javaee.web.WebApp#getDenyUncoveredHttpMethods <em>Deny Uncovered Http Methods</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6649,6 +6689,22 @@ public interface WebPackage extends EPackage {
 		 * @generated
 		 */
 		EReference WEB_APP__LOCAL_ENCODING_MAPPINGS_LISTS = eINSTANCE.getWebApp_LocalEncodingMappingsLists();
+
+		/**
+		 * The meta object literal for the '<em><b>Request Character Encoding</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_APP__REQUEST_CHARACTER_ENCODINGS = eINSTANCE.getWebApp_RequestCharacterEncodings();
+
+		/**
+		 * The meta object literal for the '<em><b>Response Character Encoding</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WEB_APP__RESPONSE_CHARACTER_ENCODINGS = eINSTANCE.getWebApp_ResponseCharacterEncodings();
 
 		/**
 		 * The meta object literal for the '<em><b>Deny Uncovered Http Methods</b></em>' containment reference list feature.
